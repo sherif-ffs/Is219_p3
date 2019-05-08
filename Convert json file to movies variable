@@ -1,0 +1,5 @@
+created () {
+            fetch('movies.json').then(response => response.json()).then(json => {
+                  this.movies = json
+            })
+      },
