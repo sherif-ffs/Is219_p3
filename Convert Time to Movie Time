@@ -1,0 +1,4 @@
+timeText: function (movie) {
+                let time = movie.runtime;
+                return Math.floor(time / 60) + 'h ' + time % 60 + 'm';
+              },
