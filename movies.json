@@ -82,5 +82,34 @@
             "likes": 1010,
             "dislikes": 156,
             "posterindex": 0
+      },
+      {
+            "title": "Kill Bill",
+            "iscore": 8.1,
+            "rating": "R",
+            "runtime": 248,
+            "released": [2003, 10, 10],
+            "country": "USA",
+            "posters": ["img/killbill.jpg", "img/killbill2.jpg", "img/killbill3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0266697/",
+            "website": "https://en.wikipedia.org/wiki/Kill_Bill",
+            "likes": 1346,
+            "dislikes": 0,
+            "posterindex": 0
+      },
+      {
+            "title": "The Shining",
+            "iscore": 8.4,
+            "rating": "R",
+            "runtime": 146,
+            "released": [1980, 6, 13],
+            "country": "USA",
+            "posters": ["img/theshining.jpg", "img/theshining2.jpg", "img/theshining3.jpg"],
+            "imdb": "https://www.imdb.com/title/tt0266697/",
+            "website": "https://en.wikipedia.org/wiki/Kill_Bill",
+            "likes": 666,
+            "dislikes": 666,
+            "posterindex": 0
       }
 ]
+
