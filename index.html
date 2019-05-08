@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IS219 Gallery (Project 3)</title>
+	<!-- Our CSS File along with Boostrap Styles, and FontAwesome Styles-->
+	<link rel="stylesheet" type='text/css' href="style.css"/>
+	<link rel="stylesheet" type='text/css' href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" type='text/css' href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+	<!-- DO NOT CHANGE ANYTHING ABOVE THIS LINE-->
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+</head>
+
+  <body>
+	<div class="container" id="vue_app">
+
+	    <div class="header">
+
+	      <div class="container">
+	        <h1 id="app_title">{{title}}</h1>
+	      </div>
+
+	    </div>
+
+
+	    <div class="main">
+				<div>
+
+
+	      <div class="container">
+					<!-- left side -->
+	        <div class="col-md-6">
+	            <div class="thumbnail" v-for="(movie, index) in leftSideMovies(movies)" :key="index"  >
+
+						<a v-on:click="posterClick(movie)"><img class="poster" :src="movie.posters[movie.posterindex]"/></a>
+						<div class="imageInfo">Poster {{movie.posterindex +1}} of {{movie.posters.length}}</div>
+
+						<p class="title">{{movie.title}} {{movie.country}}</p>
+						<p class="score"><i class="fa fa-star" aria-hidden="true"></i>{{movie.iscore}}</p>
+						<p class="runtime">Runtime: {{timeText(movie)}}</p>
+						<p class="released">Released: {{makeTextDate(movie)}} | Rated: {{movie.rating}}</p>
+						<p class="websites">Websites: <a :href="movie.imdb" target='_blank'>IMDB</a> | <a :href="movie.website" target='_blank'>Website</a></p>
+
+			            <div class="social">
+			              <a v-on:click="addLike(movie)"><p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{movie.likes}}</p></a>
+			              <a v-on:click='addDislike(movie)'><p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{movie.dislikes}}</p></a>
+			            </div>
+	            </div>
+	        </div>
+					<!-- end of left side -->
+					<!-- right side -->
+					<div class="col-md-6">
+				 		 <div class="thumbnail" v-for="(movie, index) in rightSideMovies(movies)" :key="index">
+
+				 	 <a v-on:click="posterClick(movie)"><img class="poster" :src="movie.posters[movie.posterindex]"/></a>
+				 	 <div class="imageInfo">Poster {{movie.posterindex +1}} of {{movie.posters.length}}</div>
+
+				 	 <p class="title">{{movie.title}} {{movie.country}}</p>
+				 	 <p class="score"><i class="fa fa-star" aria-hidden="true"></i>{{movie.iscore}}</p>
+				 	 <p class="runtime">Runtime: {{timeText(movie)}}</p>
+				 	 <p class="released">Released: {{makeTextDate(movie)}} | Rated: {{movie.rating}}</p>
+				 	 <p class="websites">Websites: <a :href="movie.imdb" target='_blank'>IMDB</a> | <a :href="movie.website" target='_blank'>Website</a></p>
+
+				 				 <div class="social">
+				 					 <a v-on:click="addLike(movie)"><p class="likes"><i class="fa fa-thumbs-up" aria-hidden="true"></i>{{movie.likes}}</p></a>
+				 					 <a v-on:click='addDislike(movie)'><p class="dislikes"><i class="fa fa-thumbs-down" aria-hidden="true"></i>{{movie.dislikes}}</p></a>
+				 				 </div>
+				 		 </div>
+				  </div>
+	      </div>
+				<!-- end of right side -->
+				<!-- footer -->
+	    </div>
+</div>
+	    <div class="footer">
+	      <div class="container">
+			<a id="github" class="btn btn-lg btn-warning" :href="github" target="_blank">
+				<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i>{{owner}}
+	  		</a>
+	      </div>
+	    </div>
+	</div>
+<!-- end of footer -->
+  	<!-- This load the Vue.js code -->
+	<script type="text/javascript" src="site.js"></script>
+
+
+</body>
+</html>
