@@ -1,0 +1,9 @@
+data: {
+            movies: [],
+            /* ADD ADDITIONAL VARIABLES FOR STEP 3 HERE */
+            title: 'IMDB + Sherif\'s Favorite Movies',
+          //  movieTitle: // movies[i].title
+            owner: 'Sherif Elmetwally',
+            github: 'https://github.com/sherif-ffs',
+
+      },
