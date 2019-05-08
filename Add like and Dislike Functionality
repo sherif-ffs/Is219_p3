@@ -1,0 +1,6 @@
+addLike: function (movie) {
+              return movie.likes++;
+            },
+addDislike: function (movie) {
+              return movie.dislikes--;
+            }
