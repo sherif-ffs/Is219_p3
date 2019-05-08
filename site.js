@@ -80,11 +80,11 @@ const vue_app = new Vue({
             },
             rightSideMovies: function (movies) {
               let middle = movies.length / 2;
-              return movies.slice(3);
+              return movies.slice(middle);
             },
             leftSideMovies: function (movies) {
-              return movies.slice(0,3);
+              let middle = movies.length / 2;
+              return movies.slice(0,middle);
             }
-
       }
 })
