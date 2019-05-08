@@ -1,0 +1,8 @@
+rightSideMovies: function (movies) {
+              let middle = movies.length / 2;
+              return movies.slice(middle);
+            },
+leftSideMovies: function (movies) {
+              let middle = movies.length / 2;
+              return movies.slice(0,middle);
+            }
