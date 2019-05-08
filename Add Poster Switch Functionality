@@ -1,0 +1,8 @@
+posterClick: function (movie) {
+              if (movie.posterindex == movie.posters.length - 1) {
+                movie.posterindex = 0;
+              }
+              else {
+                movie.posterindex++;
+              }
+            }
