@@ -1,0 +1,13 @@
+makeTextDate: function (movie) {
+              let monthNames = [
+              "January", "February", "March",
+              "April", "May", "June",
+              "July", "August", "September",
+               "October", "November",
+                "December"
+              ];
+              let day = movie.released[2];
+              let monthIndex = movie.released[1];
+              var year = movie.released[0];
+              return monthNames[monthIndex - 1] + ' ' + day + ', ' + year;
+            }
